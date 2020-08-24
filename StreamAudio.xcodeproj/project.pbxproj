@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD98688E24EF9A080071B7CF /* Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98688D24EF9A080071B7CF /* Downloading.swift */; };
+		BD98689024EF9A310071B7CF /* DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98688F24EF9A310071B7CF /* DownloadingDelegate.swift */; };
+		BD98689224EF9AA00071B7CF /* DownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98689124EF9AA00071B7CF /* DownloadingState.swift */; };
+		BD98689424EF9B1B0071B7CF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98689324EF9B1B0071B7CF /* Downloader.swift */; };
+		BD98689624EF9C130071B7CF /* Downloading+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98689524EF9C130071B7CF /* Downloading+URLSessionDelegate.swift */; };
+		BD98689C24EFB3E70071B7CF /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98689B24EFB3E70071B7CF /* Parsing.swift */; };
+		BD9868A324EFC9150071B7CF /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868A224EFC9150071B7CF /* ParseError.swift */; };
+		BD9868A524EFCB450071B7CF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868A424EFCB450071B7CF /* Parser.swift */; };
+		BD9868A824EFEDD70071B7CF /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868A724EFEDD70071B7CF /* Reading.swift */; };
+		BD9868AA24EFEF0B0071B7CF /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868A924EFEF0B0071B7CF /* Reader.swift */; };
+		BD9868AC24EFF04E0071B7CF /* ReaderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868AB24EFF04E0071B7CF /* ReaderError.swift */; };
+		BD9868B824F10ED50071B7CF /* Streaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868B724F10ED50071B7CF /* Streaming.swift */; };
+		BD9868BA24F10F1B0071B7CF /* StreamingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868B924F10F1B0071B7CF /* StreamingDelegate.swift */; };
+		BD9868BC24F10FB30071B7CF /* StreamingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868BB24F10FB30071B7CF /* StreamingState.swift */; };
+		BD9868BE24F113D80071B7CF /* Streamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9868BD24F113D80071B7CF /* Streamer.swift */; };
+		BDE2C5CA24EE170F002A69F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2C5C924EE170F002A69F3 /* AppDelegate.swift */; };
+		BDE2C5CC24EE170F002A69F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2C5CB24EE170F002A69F3 /* SceneDelegate.swift */; };
+		BDE2C5CE24EE170F002A69F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2C5CD24EE170F002A69F3 /* ViewController.swift */; };
+		BDE2C5D124EE170F002A69F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE2C5CF24EE170F002A69F3 /* Main.storyboard */; };
+		BDE2C5D324EE1711002A69F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE2C5D224EE1711002A69F3 /* Assets.xcassets */; };
+		BDE2C5D624EE1711002A69F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE2C5D424EE1711002A69F3 /* LaunchScreen.storyboard */; };
+		BDE2C5E124EE1711002A69F3 /* StreamAudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2C5E024EE1711002A69F3 /* StreamAudioTests.swift */; };
+		BDE2C5EC24EE1711002A69F3 /* StreamAudioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE2C5EB24EE1711002A69F3 /* StreamAudioUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDE2C5DD24EE1711002A69F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDE2C5BE24EE170F002A69F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE2C5C524EE170F002A69F3;
+			remoteInfo = StreamAudio;
+		};
+		BDE2C5E824EE1711002A69F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDE2C5BE24EE170F002A69F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDE2C5C524EE170F002A69F3;
+			remoteInfo = StreamAudio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD98688D24EF9A080071B7CF /* Downloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloading.swift; sourceTree = "<group>"; };
+		BD98688F24EF9A310071B7CF /* DownloadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingDelegate.swift; sourceTree = "<group>"; };
+		BD98689124EF9AA00071B7CF /* DownloadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingState.swift; sourceTree = "<group>"; };
+		BD98689324EF9B1B0071B7CF /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		BD98689524EF9C130071B7CF /* Downloading+URLSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Downloading+URLSessionDelegate.swift"; sourceTree = "<group>"; };
+		BD98689B24EFB3E70071B7CF /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		BD9868A224EFC9150071B7CF /* ParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseError.swift; sourceTree = "<group>"; };
+		BD9868A424EFCB450071B7CF /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		BD9868A724EFEDD70071B7CF /* Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
+		BD9868A924EFEF0B0071B7CF /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		BD9868AB24EFF04E0071B7CF /* ReaderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderError.swift; sourceTree = "<group>"; };
+		BD9868B724F10ED50071B7CF /* Streaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streaming.swift; sourceTree = "<group>"; };
+		BD9868B924F10F1B0071B7CF /* StreamingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingDelegate.swift; sourceTree = "<group>"; };
+		BD9868BB24F10FB30071B7CF /* StreamingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingState.swift; sourceTree = "<group>"; };
+		BD9868BD24F113D80071B7CF /* Streamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streamer.swift; sourceTree = "<group>"; };
+		BDE2C5C624EE170F002A69F3 /* StreamAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE2C5C924EE170F002A69F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDE2C5CB24EE170F002A69F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDE2C5CD24EE170F002A69F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDE2C5D024EE170F002A69F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDE2C5D224EE1711002A69F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDE2C5D524EE1711002A69F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDE2C5D724EE1711002A69F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE2C5DC24EE1711002A69F3 /* StreamAudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamAudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE2C5E024EE1711002A69F3 /* StreamAudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamAudioTests.swift; sourceTree = "<group>"; };
+		BDE2C5E224EE1711002A69F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE2C5E724EE1711002A69F3 /* StreamAudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreamAudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDE2C5EB24EE1711002A69F3 /* StreamAudioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamAudioUITests.swift; sourceTree = "<group>"; };
+		BDE2C5ED24EE1711002A69F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDE2C5C324EE170F002A69F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5D924EE1711002A69F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5E424EE1711002A69F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDE2C5BD24EE170F002A69F3 = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5C824EE170F002A69F3 /* StreamAudio */,
+				BDE2C5DF24EE1711002A69F3 /* StreamAudioTests */,
+				BDE2C5EA24EE1711002A69F3 /* StreamAudioUITests */,
+				BDE2C5C724EE170F002A69F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BDE2C5C724EE170F002A69F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5C624EE170F002A69F3 /* StreamAudio.app */,
+				BDE2C5DC24EE1711002A69F3 /* StreamAudioTests.xctest */,
+				BDE2C5E724EE1711002A69F3 /* StreamAudioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDE2C5C824EE170F002A69F3 /* StreamAudio */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5F924EE176F002A69F3 /* Resource */,
+				BDE2C5C924EE170F002A69F3 /* AppDelegate.swift */,
+				BDE2C5CB24EE170F002A69F3 /* SceneDelegate.swift */,
+				BDE2C5CD24EE170F002A69F3 /* ViewController.swift */,
+				BDE2C5CF24EE170F002A69F3 /* Main.storyboard */,
+				BDE2C5D224EE1711002A69F3 /* Assets.xcassets */,
+				BDE2C5D424EE1711002A69F3 /* LaunchScreen.storyboard */,
+				BDE2C5D724EE1711002A69F3 /* Info.plist */,
+			);
+			path = StreamAudio;
+			sourceTree = "<group>";
+		};
+		BDE2C5DF24EE1711002A69F3 /* StreamAudioTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5E024EE1711002A69F3 /* StreamAudioTests.swift */,
+				BDE2C5E224EE1711002A69F3 /* Info.plist */,
+			);
+			path = StreamAudioTests;
+			sourceTree = "<group>";
+		};
+		BDE2C5EA24EE1711002A69F3 /* StreamAudioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5EB24EE1711002A69F3 /* StreamAudioUITests.swift */,
+				BDE2C5ED24EE1711002A69F3 /* Info.plist */,
+			);
+			path = StreamAudioUITests;
+			sourceTree = "<group>";
+		};
+		BDE2C5F924EE176F002A69F3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BDE2C5FD24EE176F002A69F3 /* Download */,
+				BDE2C5FB24EE176F002A69F3 /* Parse */,
+				BDE2C5FC24EE176F002A69F3 /* Read */,
+				BDE2C5FA24EE176F002A69F3 /* Stream */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BDE2C5FA24EE176F002A69F3 /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				BD9868BD24F113D80071B7CF /* Streamer.swift */,
+				BD9868B724F10ED50071B7CF /* Streaming.swift */,
+				BD9868B924F10F1B0071B7CF /* StreamingDelegate.swift */,
+				BD9868BB24F10FB30071B7CF /* StreamingState.swift */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		BDE2C5FB24EE176F002A69F3 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				BD9868A424EFCB450071B7CF /* Parser.swift */,
+				BD98689B24EFB3E70071B7CF /* Parsing.swift */,
+				BD9868A224EFC9150071B7CF /* ParseError.swift */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		BDE2C5FC24EE176F002A69F3 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				BD9868A724EFEDD70071B7CF /* Reading.swift */,
+				BD9868A924EFEF0B0071B7CF /* Reader.swift */,
+				BD9868AB24EFF04E0071B7CF /* ReaderError.swift */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+		BDE2C5FD24EE176F002A69F3 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				BD98689324EF9B1B0071B7CF /* Downloader.swift */,
+				BD98689524EF9C130071B7CF /* Downloading+URLSessionDelegate.swift */,
+				BD98688D24EF9A080071B7CF /* Downloading.swift */,
+				BD98688F24EF9A310071B7CF /* DownloadingDelegate.swift */,
+				BD98689124EF9AA00071B7CF /* DownloadingState.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDE2C5C524EE170F002A69F3 /* StreamAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE2C5F024EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudio" */;
+			buildPhases = (
+				BDE2C5C224EE170F002A69F3 /* Sources */,
+				BDE2C5C324EE170F002A69F3 /* Frameworks */,
+				BDE2C5C424EE170F002A69F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamAudio;
+			productName = StreamAudio;
+			productReference = BDE2C5C624EE170F002A69F3 /* StreamAudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDE2C5DB24EE1711002A69F3 /* StreamAudioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE2C5F324EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudioTests" */;
+			buildPhases = (
+				BDE2C5D824EE1711002A69F3 /* Sources */,
+				BDE2C5D924EE1711002A69F3 /* Frameworks */,
+				BDE2C5DA24EE1711002A69F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDE2C5DE24EE1711002A69F3 /* PBXTargetDependency */,
+			);
+			name = StreamAudioTests;
+			productName = StreamAudioTests;
+			productReference = BDE2C5DC24EE1711002A69F3 /* StreamAudioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDE2C5E624EE1711002A69F3 /* StreamAudioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDE2C5F624EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudioUITests" */;
+			buildPhases = (
+				BDE2C5E324EE1711002A69F3 /* Sources */,
+				BDE2C5E424EE1711002A69F3 /* Frameworks */,
+				BDE2C5E524EE1711002A69F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDE2C5E924EE1711002A69F3 /* PBXTargetDependency */,
+			);
+			name = StreamAudioUITests;
+			productName = StreamAudioUITests;
+			productReference = BDE2C5E724EE1711002A69F3 /* StreamAudioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDE2C5BE24EE170F002A69F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = leven;
+				TargetAttributes = {
+					BDE2C5C524EE170F002A69F3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					BDE2C5DB24EE1711002A69F3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BDE2C5C524EE170F002A69F3;
+					};
+					BDE2C5E624EE1711002A69F3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = BDE2C5C524EE170F002A69F3;
+					};
+				};
+			};
+			buildConfigurationList = BDE2C5C124EE170F002A69F3 /* Build configuration list for PBXProject "StreamAudio" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDE2C5BD24EE170F002A69F3;
+			productRefGroup = BDE2C5C724EE170F002A69F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDE2C5C524EE170F002A69F3 /* StreamAudio */,
+				BDE2C5DB24EE1711002A69F3 /* StreamAudioTests */,
+				BDE2C5E624EE1711002A69F3 /* StreamAudioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDE2C5C424EE170F002A69F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE2C5D624EE1711002A69F3 /* LaunchScreen.storyboard in Resources */,
+				BDE2C5D324EE1711002A69F3 /* Assets.xcassets in Resources */,
+				BDE2C5D124EE170F002A69F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5DA24EE1711002A69F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5E524EE1711002A69F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDE2C5C224EE170F002A69F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD9868AA24EFEF0B0071B7CF /* Reader.swift in Sources */,
+				BD9868AC24EFF04E0071B7CF /* ReaderError.swift in Sources */,
+				BD98689224EF9AA00071B7CF /* DownloadingState.swift in Sources */,
+				BD9868A524EFCB450071B7CF /* Parser.swift in Sources */,
+				BD9868A824EFEDD70071B7CF /* Reading.swift in Sources */,
+				BD98689C24EFB3E70071B7CF /* Parsing.swift in Sources */,
+				BD98689424EF9B1B0071B7CF /* Downloader.swift in Sources */,
+				BD9868BA24F10F1B0071B7CF /* StreamingDelegate.swift in Sources */,
+				BD98689624EF9C130071B7CF /* Downloading+URLSessionDelegate.swift in Sources */,
+				BD9868A324EFC9150071B7CF /* ParseError.swift in Sources */,
+				BDE2C5CE24EE170F002A69F3 /* ViewController.swift in Sources */,
+				BD9868B824F10ED50071B7CF /* Streaming.swift in Sources */,
+				BD9868BC24F10FB30071B7CF /* StreamingState.swift in Sources */,
+				BDE2C5CA24EE170F002A69F3 /* AppDelegate.swift in Sources */,
+				BD9868BE24F113D80071B7CF /* Streamer.swift in Sources */,
+				BD98688E24EF9A080071B7CF /* Downloading.swift in Sources */,
+				BDE2C5CC24EE170F002A69F3 /* SceneDelegate.swift in Sources */,
+				BD98689024EF9A310071B7CF /* DownloadingDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5D824EE1711002A69F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE2C5E124EE1711002A69F3 /* StreamAudioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDE2C5E324EE1711002A69F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE2C5EC24EE1711002A69F3 /* StreamAudioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDE2C5DE24EE1711002A69F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDE2C5C524EE170F002A69F3 /* StreamAudio */;
+			targetProxy = BDE2C5DD24EE1711002A69F3 /* PBXContainerItemProxy */;
+		};
+		BDE2C5E924EE1711002A69F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDE2C5C524EE170F002A69F3 /* StreamAudio */;
+			targetProxy = BDE2C5E824EE1711002A69F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BDE2C5CF24EE170F002A69F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE2C5D024EE170F002A69F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDE2C5D424EE1711002A69F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDE2C5D524EE1711002A69F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDE2C5EE24EE1711002A69F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDE2C5EF24EE1711002A69F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDE2C5F124EE1711002A69F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5HS3RH994;
+				INFOPLIST_FILE = StreamAudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDE2C5F224EE1711002A69F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5HS3RH994;
+				INFOPLIST_FILE = StreamAudio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BDE2C5F424EE1711002A69F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamAudioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamAudio.app/StreamAudio";
+			};
+			name = Debug;
+		};
+		BDE2C5F524EE1711002A69F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamAudioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreamAudio.app/StreamAudio";
+			};
+			name = Release;
+		};
+		BDE2C5F724EE1711002A69F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamAudioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StreamAudio;
+			};
+			name = Debug;
+		};
+		BDE2C5F824EE1711002A69F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamAudioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Leven.StreamAudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StreamAudio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDE2C5C124EE170F002A69F3 /* Build configuration list for PBXProject "StreamAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE2C5EE24EE1711002A69F3 /* Debug */,
+				BDE2C5EF24EE1711002A69F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE2C5F024EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE2C5F124EE1711002A69F3 /* Debug */,
+				BDE2C5F224EE1711002A69F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE2C5F324EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE2C5F424EE1711002A69F3 /* Debug */,
+				BDE2C5F524EE1711002A69F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDE2C5F624EE1711002A69F3 /* Build configuration list for PBXNativeTarget "StreamAudioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDE2C5F724EE1711002A69F3 /* Debug */,
+				BDE2C5F824EE1711002A69F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDE2C5BE24EE170F002A69F3 /* Project object */;
+}

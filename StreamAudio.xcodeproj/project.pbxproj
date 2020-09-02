@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD8C8E0224F9E83400DD9259 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0124F9E83400DD9259 /* Recording.swift */; };
+		BD8C8E0624F9E8C900DD9259 /* AudioReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0524F9E8C900DD9259 /* AudioReading.swift */; };
+		BD8C8E0824F9E9C700DD9259 /* AudioFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0724F9E9C600DD9259 /* AudioFileReader.swift */; };
+		BD8C8E0A24FA3FB400DD9259 /* AudioWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0924FA3FB400DD9259 /* AudioWriting.swift */; };
+		BD8C8E0C24FA429A00DD9259 /* AudioFileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0B24FA429A00DD9259 /* AudioFileWriter.swift */; };
+		BD8C8E0F24FA51E500DD9259 /* KTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0E24FA51E500DD9259 /* KTV.swift */; };
 		BD98688E24EF9A080071B7CF /* Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98688D24EF9A080071B7CF /* Downloading.swift */; };
 		BD98689024EF9A310071B7CF /* DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98688F24EF9A310071B7CF /* DownloadingDelegate.swift */; };
 		BD98689224EF9AA00071B7CF /* DownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD98689124EF9AA00071B7CF /* DownloadingState.swift */; };
@@ -50,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD8C8E0124F9E83400DD9259 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		BD8C8E0524F9E8C900DD9259 /* AudioReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReading.swift; sourceTree = "<group>"; };
+		BD8C8E0724F9E9C600DD9259 /* AudioFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileReader.swift; sourceTree = "<group>"; };
+		BD8C8E0924FA3FB400DD9259 /* AudioWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioWriting.swift; sourceTree = "<group>"; };
+		BD8C8E0B24FA429A00DD9259 /* AudioFileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileWriter.swift; sourceTree = "<group>"; };
+		BD8C8E0E24FA51E500DD9259 /* KTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTV.swift; sourceTree = "<group>"; };
 		BD98688D24EF9A080071B7CF /* Downloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloading.swift; sourceTree = "<group>"; };
 		BD98688F24EF9A310071B7CF /* DownloadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingDelegate.swift; sourceTree = "<group>"; };
 		BD98689124EF9AA00071B7CF /* DownloadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingState.swift; sourceTree = "<group>"; };
@@ -106,6 +118,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD8C8E0024F9E82600DD9259 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				BD8C8E0124F9E83400DD9259 /* Recording.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		BD8C8E0324F9E8A800DD9259 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				BD8C8E0724F9E9C600DD9259 /* AudioFileReader.swift */,
+				BD8C8E0524F9E8C900DD9259 /* AudioReading.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		BD8C8E0424F9E8A800DD9259 /* Writer */ = {
+			isa = PBXGroup;
+			children = (
+				BD8C8E0924FA3FB400DD9259 /* AudioWriting.swift */,
+				BD8C8E0B24FA429A00DD9259 /* AudioFileWriter.swift */,
+			);
+			path = Writer;
+			sourceTree = "<group>";
+		};
+		BD8C8E0D24FA51BB00DD9259 /* KTV */ = {
+			isa = PBXGroup;
+			children = (
+				BD8C8E0E24FA51E500DD9259 /* KTV.swift */,
+			);
+			path = KTV;
+			sourceTree = "<group>";
+		};
 		BDE2C5BD24EE170F002A69F3 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +208,10 @@
 		BDE2C5F924EE176F002A69F3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BD8C8E0D24FA51BB00DD9259 /* KTV */,
+				BD8C8E0324F9E8A800DD9259 /* Reader */,
+				BD8C8E0424F9E8A800DD9259 /* Writer */,
+				BD8C8E0024F9E82600DD9259 /* Record */,
 				BDE2C5FD24EE176F002A69F3 /* Download */,
 				BDE2C5FB24EE176F002A69F3 /* Parse */,
 				BDE2C5FC24EE176F002A69F3 /* Read */,
@@ -349,18 +399,24 @@
 				BD98689224EF9AA00071B7CF /* DownloadingState.swift in Sources */,
 				BD9868A524EFCB450071B7CF /* Parser.swift in Sources */,
 				BD9868A824EFEDD70071B7CF /* Reading.swift in Sources */,
+				BD8C8E0824F9E9C700DD9259 /* AudioFileReader.swift in Sources */,
 				BD98689C24EFB3E70071B7CF /* Parsing.swift in Sources */,
 				BD98689424EF9B1B0071B7CF /* Downloader.swift in Sources */,
 				BD9868BA24F10F1B0071B7CF /* StreamingDelegate.swift in Sources */,
+				BD8C8E0F24FA51E500DD9259 /* KTV.swift in Sources */,
 				BD98689624EF9C130071B7CF /* Downloading+URLSessionDelegate.swift in Sources */,
 				BD9868A324EFC9150071B7CF /* ParseError.swift in Sources */,
 				BDE2C5CE24EE170F002A69F3 /* ViewController.swift in Sources */,
 				BD9868B824F10ED50071B7CF /* Streaming.swift in Sources */,
+				BD8C8E0C24FA429A00DD9259 /* AudioFileWriter.swift in Sources */,
 				BD9868BC24F10FB30071B7CF /* StreamingState.swift in Sources */,
+				BD8C8E0224F9E83400DD9259 /* Recording.swift in Sources */,
 				BDE2C5CA24EE170F002A69F3 /* AppDelegate.swift in Sources */,
 				BD9868BE24F113D80071B7CF /* Streamer.swift in Sources */,
+				BD8C8E0A24FA3FB400DD9259 /* AudioWriting.swift in Sources */,
 				BD98688E24EF9A080071B7CF /* Downloading.swift in Sources */,
 				BDE2C5CC24EE170F002A69F3 /* SceneDelegate.swift in Sources */,
+				BD8C8E0624F9E8C900DD9259 /* AudioReading.swift in Sources */,
 				BD98689024EF9A310071B7CF /* DownloadingDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

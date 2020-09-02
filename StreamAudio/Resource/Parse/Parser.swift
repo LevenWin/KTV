@@ -31,12 +31,15 @@ public class Parser: Parsing {
         let streamID = self.streamID!
         let count = data.count
         var data = data
+
         _ = try data.withUnsafeBytes { (bytes: UnsafePointer<UInt8>) in
             let result = AudioFileStreamParseBytes(streamID, UInt32(count), bytes, [])
             guard result == noErr else {
                 throw ParserError.failedToParseByte(result)
             }
         }
+        #warning("TODO")
+        // Why not work
 //        _ = try data.withUnsafeBytes({ (bytes) in
 //            let result = AudioFileStreamParseBytes(streamID, UInt32(count), bytes.baseAddress, [])
 //            guard result == noErr else {

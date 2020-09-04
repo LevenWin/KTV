@@ -10,75 +10,63 @@ import Foundation
 import AVFoundation
 class KTV: Streamer {
 
+    // 伴奏人声合成
     var audioMixer = AVAudioMixerNode()
     
+    // 人声
     lazy var micMixer: AVAudioMixerNode = {
         let node = AVAudioMixerNode()
 //        node.outputVolume = 1.0
         return node
     }()
-    
-    // 失真效果器
-    lazy var recordRate: AVAudioUnitTimePitch = {
-        let node = AVAudioUnitTimePitch()
-        node.rate = 1
-        return node
-    }()
-    // 失真效果器
-    lazy var distortion: AVAudioUnitDistortion = {
-        let node = AVAudioUnitDistortion()
-        node.loadFactoryPreset(AVAudioUnitDistortionPreset(rawValue: 0)!)
-        return node
-    }()
-    // 立体声混响
+
+    // 人声立体声混响
     lazy var micReverb:AVAudioUnitReverb = {
         let node = AVAudioUnitReverb()
         node.wetDryMix = 50
         return node
     }()
-    // 音频延迟，可理解为自动多重奏
-    lazy var delay: AVAudioUnitDelay = {
+    // 人声音频延迟，可理解为自动多重奏
+    lazy var micdelay: AVAudioUnitDelay = {
         let node = AVAudioUnitDelay()
         node.delayTime = 0
         return node
     }()
+
     
     var mixerWriter: AVAudioFile?
     var recordWriter: AVAudioFile?
     
     override func attachNodes() {
         super.attachNodes()
-        engine.attach(delay)
+        engine.attach(micdelay)
         engine.attach(micMixer)
         engine.attach(micReverb)
-        engine.attach(distortion)
-        engine.attach(recordRate)
+
+        engine.attach(audioMixer)
     }
     override func play() {
         initSoundSave()
         super.play()
     }
-//    override func pause() {
-//        if engine.isRunning {
-//            engine.pause()
-//        }
-//        state = .paused
-//    }
-//
-//    override func stop() {
-//        engine.stop()
-//    }
-
+    
+    func updateVoiceVolume(_ volume: CGFloat) {
+        engine.inputNode.volume = Float(volume)
+    }
+    
+    func updateSongVolume(_ volume: CGFloat) {
+        playerNode.volume = Float(volume)
+    }
+    
     override func connectNodes() {
         let recordDesc = engine.inputNode.inputFormat(forBus: 0)
         print(recordDesc, readFormat)
-        playerNode.volume = 0.7
-        // 录音
-        engine.connect(engine.inputNode, to: delay, format: engine.inputNode.inputFormat(forBus: 0))
-        // 延迟
-        engine.connect(delay, to: micReverb, format: engine.inputNode.inputFormat(forBus: 0))
-        // 混响
-        engine.connect(micReverb, to: micMixer, format: engine.inputNode.inputFormat(forBus: 0))
+        // 人声录音
+        engine.connect(engine.inputNode, to: micReverb, format: engine.inputNode.inputFormat(forBus: 0))
+        // 人声延迟
+        engine.connect(micReverb, to: micdelay, format: engine.inputNode.inputFormat(forBus: 0))
+        // 人声混响
+        engine.connect(micdelay, to: micMixer, format: engine.inputNode.inputFormat(forBus: 0))
         // 伴奏播放
         engine.connect(playerNode, to: micMixer, fromBus: 0, toBus: 1, format: readFormat)
 

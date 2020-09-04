@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var recordReverbStep: UIStepper!
     @IBOutlet weak var recordDelay: UIStepper!
-    @IBOutlet weak var recordRateStep: UIStepper!
-    
+    @IBOutlet weak var recordVolumeStep: UIStepper!
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playProgressView: UIView!
@@ -23,14 +22,14 @@ class ViewController: UIViewController {
         s.delegate = self
         return s
     }()
-    var player: AVAudioPlayer?
+    var player = KTVPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         playProgressView.frame = CGRect(x: 0, y: 0, width: 0, height: playProgressView.superview?.frame.size.height ?? 0)
         downloadedProgress.frame = CGRect(x: 0, y: 0, width: 0, height: playProgressView.superview?.frame.size.height ?? 0)
 
-//        http://qfgraevqo.hn-bkt.clouddn.com/%E5%BE%90%E5%90%91%E4%B8%9C%5B%E9%9F%B3%E4%B9%90%E4%BA%BA%5D-%E5%9B%BD%E9%99%85%E6%AD%8C%EF%BC%88%E9%98%BF%E5%8D%A1%E8%B4%9D%E6%8B%89%E7%89%88%EF%BC%89%28%E4%BC%B4%E5%A5%8F%29.mp3
-        let url = URL(string: "http://qfgraevqo.hn-bkt.clouddn.com/%E5%BE%90%E5%90%91%E4%B8%9C%5B%E9%9F%B3%E4%B9%90%E4%BA%BA%5D-%E5%9B%BD%E9%99%85%E6%AD%8C%EF%BC%88%E9%98%BF%E5%8D%A1%E8%B4%9D%E6%8B%89%E7%89%88%EF%BC%89%28%E4%BC%B4%E5%A5%8F%29.mp3")
+        let url = URL(string: "http://qfgraevqo.hn-bkt.clouddn.com/%E5%94%90%E6%9C%9D%20-%20%E5%9B%BD%E9%99%85%E6%AD%8C.mp3")
         streamer.url = url
         do {
             try?          AVAudioSession.sharedInstance().setPreferredIOBufferDuration(0.01)
@@ -48,20 +47,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickVoice(_ sender: Any) {
-        player?.stop()
-        do {
-            try? player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: streamer.recordvVoiceSavePath()), fileTypeHint: ".wav")
-
-        }
-        player?.play()
+        player.playOrStop()
+        player.localURL = URL(fileURLWithPath: streamer.recordvVoiceSavePath())
+        player.playOrStop()
     }
     
     @IBAction func clickProduct(_ sender: Any) {
-        player?.stop()
-        do {
-            try? player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: streamer.mixerAudioSavePath()), fileTypeHint: ".wav")
-        }
-        player?.play()
+        player.playOrStop()
+        player.localURL = URL(fileURLWithPath: streamer.mixerAudioSavePath())
+        player.playOrStop()
     }
     @IBAction func recordReverbChange(_ sender: Any) {
         let reverb = Int(recordReverbStep.value >= 12 ? 12 : recordReverbStep.value)
@@ -72,15 +66,41 @@ class ViewController: UIViewController {
     @IBAction func recordDelayChange(_ sender: Any) {
         let value = Float(recordDelay.value / 50)
         print("伴奏延迟: ", value)
-        streamer.delay.delayTime = TimeInterval(value)
+        streamer.micdelay.delayTime = TimeInterval(value)
     }
     
-    @IBAction func recordRateChange(_ sender: Any) {
-        let rate = recordRateStep.value
-        print("伴奏速度:", rate)
-        streamer.recordRate.rate = Float(rate)
+    @IBAction func recordVolumeChange(_ sender: Any) {
+        let volume = recordVolumeStep.value
+        print("伴奏音量:", volume)
+        streamer.updateVoiceVolume(CGFloat(volume))
+        
+    }
+    @IBAction func songVolumeChange(_ sender: Any) {
+        if let step = sender as? UIStepper {
+            print("伴奏音量: ", CGFloat(step.value))
+            streamer.updateSongVolume(CGFloat(step.value))
+        }
     }
     
+    @IBAction func productReverbChange(_ sender: Any) {
+        if let step = sender as? UIStepper {
+            print("成品混响: ", CGFloat(step.value))
+            player.songReverb.loadFactoryPreset(AVAudioUnitReverbPreset(rawValue: Int(step.value))!)
+        }
+    }
+    @IBAction func productDelayChange(_ sender: Any) {
+        if let step = sender as? UIStepper {
+            print("成品延迟: ", CGFloat(step.value))
+            player.songDelay.delayTime = step.value
+        }
+        
+    }
+    @IBAction func productRateChange(_ sender: Any) {
+        if let step = sender as? UIStepper {
+            print("成品速度: ", CGFloat(step.value))
+            player.songRate.rate = Float(step.value)
+        }
+    }
 }
 extension ViewController: StreamingDelegate {
     func streamer(_ streamer: Streaming, failedDownloadWithError error: Error, forURL url: URL) {

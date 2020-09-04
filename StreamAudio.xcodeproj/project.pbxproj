@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD4A17F82501F7F700C25E11 /* KTVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A17F72501F7F700C25E11 /* KTVPlayer.swift */; };
 		BD8C8E0224F9E83400DD9259 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0124F9E83400DD9259 /* Recording.swift */; };
 		BD8C8E0624F9E8C900DD9259 /* AudioReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0524F9E8C900DD9259 /* AudioReading.swift */; };
 		BD8C8E0824F9E9C700DD9259 /* AudioFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C8E0724F9E9C600DD9259 /* AudioFileReader.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD4A17F72501F7F700C25E11 /* KTVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTVPlayer.swift; sourceTree = "<group>"; };
 		BD8C8E0124F9E83400DD9259 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
 		BD8C8E0524F9E8C900DD9259 /* AudioReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioReading.swift; sourceTree = "<group>"; };
 		BD8C8E0724F9E9C600DD9259 /* AudioFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileReader.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				BD8C8E0E24FA51E500DD9259 /* KTV.swift */,
+				BD4A17F72501F7F700C25E11 /* KTVPlayer.swift */,
 			);
 			path = KTV;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4A17F82501F7F700C25E11 /* KTVPlayer.swift in Sources */,
 				BD9868AA24EFEF0B0071B7CF /* Reader.swift in Sources */,
 				BD9868AC24EFF04E0071B7CF /* ReaderError.swift in Sources */,
 				BD98689224EF9AA00071B7CF /* DownloadingState.swift in Sources */,
